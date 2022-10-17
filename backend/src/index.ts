@@ -1,9 +1,10 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import db from './utils/db';
+
+db.createIfNotExist();
 
 const port = process.env.PORT || 8080;
 
 const server = express();
-
-server.get('/', (req: Request, res: Response) => res.send('Hello, World!'));
 
 server.listen(port, () => console.log(`Started server at 0.0.0.0:${port}`));

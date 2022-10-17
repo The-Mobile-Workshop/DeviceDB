@@ -11,11 +11,13 @@ function save(db: any) {
 }
 
 function createIfNotExist() {
-  if (!existsSync(dbFilePath))
-    writeFileSync(
-      dbFilePath,
-      JSON.stringify({ collections: { documents: {} } }),
-    );
+  setInterval(() => {
+    if (!existsSync(dbFilePath))
+      writeFileSync(
+        dbFilePath,
+        JSON.stringify({ collections: { documents: {} } }),
+      );
+  }, 1000);
 }
 
 export { open, save, createIfNotExist };
