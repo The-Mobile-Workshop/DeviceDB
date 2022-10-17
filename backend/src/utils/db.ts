@@ -15,7 +15,7 @@ function createIfNotExist() {
     if (!existsSync(dbFilePath))
       writeFileSync(
         dbFilePath,
-        JSON.stringify({ collections: { documents: {} } }),
+        JSON.stringify({}),
       );
   }, 1000);
 }
