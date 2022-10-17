@@ -28,7 +28,7 @@ export default (req: Request, res: Response) => {
   }
 
   res.status(401).json({
-    message: 'Unauthorized',
+    message: 'Incorrect admin password',
     payload: null,
   });
 };
