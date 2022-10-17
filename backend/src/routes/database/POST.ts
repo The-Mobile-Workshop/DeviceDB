@@ -1,8 +1,11 @@
 import { Request, Response } from 'express';
 import db from '../../utils/db';
+import hash from '../../utils/hash';
 
 export default (req: Request, res: Response) => {
-  if (req.headers.authorization === db.open()._secrets.adminPassword) {
+  if (
+    hash(String(req.headers.authorization)) === db.open()._secrets.adminPassword
+  ) {
     try {
       const newDatabase = req.body;
 

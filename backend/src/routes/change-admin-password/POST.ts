@@ -5,7 +5,9 @@ import hash from '../../utils/hash';
 export default (req: Request, res: Response) => {
   const database = db.open();
 
-  if (req.headers.authorization === database._secrets.adminPassword) {
+  if (
+    hash(String(req.headers.authorization)) === database._secrets.adminPassword
+  ) {
     if (!req.body.newPassword) {
       res.status(400).json({
         message: 'New password is not given',
