@@ -8,6 +8,7 @@ const port = process.env.PORT || 8080;
 
 const server = express();
 
+server.use(express.json());
 server.use(router);
 
 server.listen(port, () => console.log(`Started server at 0.0.0.0:${port}`));

@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
+import hash from './hash';
 
 const dbFilePath = process.env.DB || './db.json';
 
@@ -15,7 +16,7 @@ function createIfNotExist() {
     if (!existsSync(dbFilePath))
       writeFileSync(
         dbFilePath,
-        JSON.stringify({}),
+        JSON.stringify({ _secrets: { adminPassword: hash('secret') } }),
       );
   }, 1000);
 }
