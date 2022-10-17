@@ -7,7 +7,10 @@ export default (req: Request, res: Response) => {
 
     delete database._secrets;
 
-    res.json(database);
+    res.json({
+      message: 'Success',
+      payload: database,
+    });
   } catch {
     res.status(500).json({
       message: 'Internal server error',
