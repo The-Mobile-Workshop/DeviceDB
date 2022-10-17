@@ -1,5 +1,5 @@
 import databaseGET from './routes/database/GET';
-import databasePOST from './routes/database/POST';
+import databasePUT from './routes/database/PUT';
 import changeAdminPasswordPOST from './routes/change-admin-password/POST';
 
 import { Router } from 'express';
@@ -7,7 +7,7 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/database', databaseGET);
-router.post('/database', databasePOST);
+router.put('/database', databasePUT);
 router.post('/change-admin-password', changeAdminPasswordPOST);
 
 export default router;
