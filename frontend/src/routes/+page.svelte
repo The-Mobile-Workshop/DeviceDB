@@ -21,9 +21,7 @@
 
 <Navbar pressed="Home" />
 <main class="p-4">
-  <h1 class="text-2xl mb-3">
-    Select brand to view info about:
-  </h1>
+  <h1 class="text-2xl mb-3">Select brand to view info about:</h1>
 
   {#if brands === 'Loading'}
     <svg

@@ -6,25 +6,17 @@
   <div class="mt-4 mb-4 text-xl flex justify-center">
     <div class="mr-2">
       {#if pressed === 'Home'}
-        <a href="/" class="text-white hover:text-white">
-          Home
-        </a>
+        <a href="/" class="text-white hover:text-white"> Home </a>
       {:else}
-        <a href="/">
-          Home
-        </a>
+        <a href="/"> Home </a>
       {/if}
     </div>
 
     <div class="ml-2">
       {#if pressed === 'Admin'}
-        <a href="/admin" class="text-white hover:text-white">
-          Admin
-        </a>
+        <a href="/admin" class="text-white hover:text-white"> Admin </a>
       {:else}
-        <a href="/admin">
-          Admin
-        </a>
+        <a href="/admin"> Admin </a>
       {/if}
     </div>
   </div>
