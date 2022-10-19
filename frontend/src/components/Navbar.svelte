@@ -2,7 +2,7 @@
   export let pressed: string;
 </script>
 
-<nav class="border-b-2 border-b-blue-600">
+<nav class="border-b-2 border-b-white">
   <div class="mt-4 mb-4 text-xl flex justify-center">
     <div class="mr-2">
       {#if pressed === 'Home'}
