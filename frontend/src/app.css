@@ -13,3 +13,17 @@ button {
 a {
   @apply text-blue-600 hover:text-blue-800;
 }
+
+table {
+  @apply w-full;
+}
+
+table,
+th,
+td {
+  @apply border-2 border-white;
+}
+
+td {
+  @apply p-2;
+}
