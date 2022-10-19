@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "DB=test-db.json npx nodemon src/index.ts --ignore 'test-db.json' --ignore 'secrets.json'",
+    "dev": "DB=test-db.json npx nodemon src/index.ts --ignore 'test-db.json'",
     "build": "npx tsc",
     "prettier": "prettier --write ."
   },
